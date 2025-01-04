@@ -2,14 +2,16 @@ import { useState } from 'react'
 import './App.css'
 
 function App() {
-  const [sequence] = useState([1, 2, 3, 5, 8, 13])
+  const [sequence] = useState([1, 2, 48, 3456, 552, 372, 105, 125])
   const [hints] = useState([
     "Start with the smallest positive integer",
     "The next even number after 1",
-    "The number of primary colors",
-    "Number of fingers on one hand",
-    "Number of planets in our solar system (before Pluto was reclassified)",
-    "The number of stripes on the US flag"
+    "czerwony",
+    "любимый мамин цвет, по порядку",
+    "B",
+    "",
+    "Ile macie lat?",
+    "What month and year is it now?"
   ])
   const [currentIndex, setCurrentIndex] = useState(0)
   const [userInput, setUserInput] = useState('')
@@ -28,7 +30,7 @@ function App() {
       setCurrentIndex(currentIndex + 1)
       setUserInput('')
       if (currentIndex === sequence.length - 1) {
-        setMessage('Supercomputer broken! 🎉 You win!')
+        setMessage('Supercomputer broken! 🎉 You win! You may start playing computer now!')
       }
     } else {
       setMessage(`Incorrect! ❌ Try again`)
