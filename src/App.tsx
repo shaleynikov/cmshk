@@ -3,6 +3,14 @@ import './App.css'
 
 function App() {
   const [sequence] = useState([1, 2, 3, 5, 8, 13])
+  const [hints] = useState([
+    "Start with the smallest positive integer",
+    "The next even number after 1",
+    "The number of primary colors",
+    "Number of fingers on one hand",
+    "Number of planets in our solar system (before Pluto was reclassified)",
+    "The number of stripes on the US flag"
+  ])
   const [currentIndex, setCurrentIndex] = useState(0)
   const [userInput, setUserInput] = useState('')
   const [message, setMessage] = useState('Start breaking the supercomputer!')
@@ -29,11 +37,7 @@ function App() {
   }
 
   const getHint = () => {
-    const currentNumber = sequence[currentIndex]
-    if (currentNumber % 2 === 0) {
-      return 'Hint: This number is even'
-    }
-    return 'Hint: This number is odd'
+    return `Hint: ${hints[currentIndex]}`
   }
 
   return (
