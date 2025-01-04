@@ -2,7 +2,7 @@ import { useState } from 'react'
 import './App.css'
 
 function App() {
-  const [sequence, setSequence] = useState([1, 2, 3, 5, 8, 13])
+  const [sequence] = useState([1, 2, 3, 5, 8, 13])
   const [currentIndex, setCurrentIndex] = useState(0)
   const [userInput, setUserInput] = useState('')
   const [message, setMessage] = useState('Start breaking the supercomputer!')
